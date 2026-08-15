@@ -1,5 +1,6 @@
 class Solution:
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        # or nums.append(0)
         ones = 0
         maxones = 0
         for i in nums:
@@ -9,4 +10,5 @@ class Solution:
                 if ones > maxones:
                     maxones = ones
                 ones = 0
+        # return maxcount
         return max(maxones,ones)
